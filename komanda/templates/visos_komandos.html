@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Komandos</h1>
+<p>Pradinis komandų sąrašas:</p>
+<ul>
+    {% for komanda_o in visos_komandos_t %}
+        <li>{{ komanda_o.pavadinimas }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}
