@@ -23,3 +23,11 @@ def komandos(request):
         'visos_komandos_t': visos_komandos
     }
     return render(request, 'visos_komandos.html', context=context_t)
+
+
+def komanda1(request, komanda_id):
+    viena_komanda = get_object_or_404(Komanda, pk=komanda_id)
+    context_t = {
+        'viena_komanda_t': viena_komanda
+    }
+    return render(request, 'viena_komanda.html', context=context_t)
