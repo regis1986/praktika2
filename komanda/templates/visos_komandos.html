@@ -5,7 +5,7 @@
 <p>Pradinis komandų sąrašas:</p>
 <ul>
     {% for komanda_o in visos_komandos_t %}
-        <li>{{ komanda_o.pavadinimas }}</li>
+        <li><a href="{% url 'viena-komanda' komanda_o.id %}">{{ komanda_o.pavadinimas }}</a></li>
     {% endfor %}
 </ul>
 {% endblock %}

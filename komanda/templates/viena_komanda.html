@@ -4,9 +4,14 @@
 
 <h4> {{ viena_komanda_t.miestas }} {{  viena_komanda_t.pavadinimas }}</h4>
 <hr/>
+<p><strong>Klubas įkurtas:</strong> {{ viena_komanda_t.ikurimo_data }} m. </p>
+{% if viena_komanda_t.zaidejas_set.all %}
+<p >Komanda {{ viena_komanda_t.pavadinimas }} turi šiuos žaidėjus: </p>
+    {% for zaidejas_o in viena_komanda_t.zaidejas_set.all %}
+        <p><li>{{ zaidejas_o.vardas }} {{ zaidejas_o.pavarde  }}</li></p>
 
-
-
-
-
+    {% endfor %}
+{% else %}
+    <p>Komanda neturi žaidėjų</p>
+{% endif %}
 {% endblock %}
