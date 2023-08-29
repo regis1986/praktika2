@@ -20,11 +20,11 @@ MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
             {% block sidebar %}
             <ul class="sidebar-nav">
                 <li><a href="{% url 'homepage' %}">Pradžia</a></li>
-                <li><a href="">Visi žaidėjai</a></li>
+                <li><a href="{% url 'visi-zaidejai' %}">Visi žaidėjai</a></li>
                 <li><a href="{% url 'visos-komandos' %}">Visos komandos</a></li>
                  <li>
-                    <form action="rch-name' %}" method="get" class="form-group">
-                        <input type="text" name="search_text" class="form-control" placeholder="Paieška" style="min-width: 6rem;">
+                    <form action="{% url 'paieska-url'%}" method="get" class="form-group">
+                        <input type="text" name="laukelio-tekstas" class="form-control" placeholder="Paieška" style="min-width: 6rem;">
                     </form>
                 </li>
 

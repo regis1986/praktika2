@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>{{ zaidejas.vardas }} {{ zaidejas.pavarde }}</h1>
+<h3>Komanda: {{ zaidejas.komanda.miestas }} {{ zaidejas.komanda.pavadinimas }}</h3>
+<h4>Sporto šaka: {{ zaidejas.komanda.saka }}</h4>
+<hr/>
+<h5>Žaidėjo aprašymas</h5>
+<p>Pozicija: {{ zaidejas.pozicija }}</p>
+<p>Amžius: {{ zaidejas.amzius }}</p>
+
+
+
+{% endblock %}

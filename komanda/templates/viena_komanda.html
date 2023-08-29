@@ -8,7 +8,7 @@
 {% if viena_komanda_t.zaidejas_set.all %}
 <p >Komanda {{ viena_komanda_t.pavadinimas }} turi šiuos žaidėjus: </p>
     {% for zaidejas_o in viena_komanda_t.zaidejas_set.all %}
-        <p><li>{{ zaidejas_o.vardas }} {{ zaidejas_o.pavarde  }}</li></p>
+        <p><li><a href="{% url 'vienas-zaidejas' zaidejas_o.id%}">{{ zaidejas_o.vardas }} {{ zaidejas_o.pavarde }}</a></p>
 
     {% endfor %}
 {% else %}

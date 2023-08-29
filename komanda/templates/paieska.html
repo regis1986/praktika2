@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h3>Rezultatai pagal paiešką: {{ paieskos_tekstas_t }}"</h3>
+{% if paieskos_rezultatai_t %}
+{% for zaidejas_o in paieskos_rezultatai_t %}
+<p>
+    <a href="{% url 'vienas-zaidejas' zaidejas_o.id %}">{{ zaidejas_o.vardas }} {{ zaidejas_o.pavarde }},</a>
+    <a href="{% url 'viena-komanda' zaidejas_o.komanda.id %}"> {{ zaidejas_o.komanda.pavadinimas }} </a>
+
+
+</p>
+{% endfor %}
+{% else %}
+    <p>Pagal jusu paieska nieko nerasta</p>
+{% endif %}
+{% endblock %}

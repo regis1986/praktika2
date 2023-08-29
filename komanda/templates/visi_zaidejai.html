@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Visų žaidėjų sąrašas:</h1>
+<ul>
+    {% for zaidejas_o in zaidejas_list %}
+    <li><a href="{% url 'vienas-zaidejas' zaidejas_o.id%}">{{ zaidejas_o.vardas }} {{ zaidejas_o.pavarde }}</a>
+        {{ zaidejas.komanda.pavadinimas }}</li>
+    {% endfor %}
+
+
+</ul>
+
+
+
+
+{% endblock %}
